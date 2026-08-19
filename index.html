@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Menú · BELUM — Coffee, Juices & Workstation</title>
+<meta name="description" content="Menú digital de BELUM: café, lattes, frappés, licuados, jugos, tés, desayunos, comidas, postres y promociones del día. Monterrey.">
+<meta name="theme-color" content="#5D7A4A">
+<link rel="icon" href="assets/img/logo-belum-word.svg">
+
+<meta property="og:title" content="Menú · BELUM">
+<meta property="og:description" content="Café, jugos y cocina de casa. Consulta el menú completo.">
+<meta property="og:image" content="assets/img/portada-mesa.webp">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ============================== PORTADA ==============================
+     Para cambiar el texto de la portada, edita este bloque.
+     ==================================================================== -->
+<header class="portada" id="inicio">
+  <div class="portada__patron" aria-hidden="true"></div>
+  <div class="portada__velo" aria-hidden="true"></div>
+
+  <div class="portada__interior">
+    <img class="portada__logo" src="assets/img/logo-belum.svg" alt="BELUM — Coffee, Juices &amp; Workstation" width="609" height="235" fetchpriority="high">
+    <div class="portada__regla" aria-hidden="true"></div>
+    <p class="portada__frase">Café, jugos y cocina de casa. Desayunos, comidas, postres y bebidas para quedarte un rato.</p>
+    <a class="boton-menu" href="#menu" data-ir-menu>
+      Ver menú
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+  </div>
+
+  <div class="portada__pie">
+    <span>Filósofos 215, Col. Tecnológico · Monterrey</span>
+    <a href="https://instagram.com/belumcoffee" target="_blank" rel="noopener">@belumcoffee</a>
+  </div>
+</header>
+
+<!-- ============================== BARRA ============================== -->
+<div class="barra">
+  <div class="contenedor barra__fila">
+    <a class="barra__marca" href="#inicio" aria-label="Inicio">
+      <img src="assets/img/logo-belum-word.svg" alt="BELUM" width="74" height="22">
+    </a>
+    <div class="buscador">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <label class="solo-lectores" for="buscar">Buscar en el menú</label>
+      <input id="buscar" type="search" placeholder="Buscar: chilaquiles, latte…" autocomplete="off" enterkeyhint="search">
+      <button class="buscador__limpiar" id="limpiar" type="button" aria-label="Borrar búsqueda">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+<nav class="tira" aria-label="Secciones del menú">
+  <div class="contenedor tira__scroll" id="tira"></div>
+</nav>
+
+<!-- ============================== MENÚ ============================== -->
+<main class="contenedor">
+  <section class="filtros" aria-label="Filtros">
+    <p class="filtros__etiqueta">Filtrar</p>
+    <div class="filtros__lista" id="filtros"></div>
+    <p class="resultado-cuenta" id="cuenta" hidden></p>
+  </section>
+
+  <div class="menu" id="menu"></div>
+</main>
+
+<!-- ============================== MODAL ============================== -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+  <div class="modal__fondo" aria-hidden="true"></div>
+  <div class="modal__panel" id="modal-panel"></div>
+</div>
+
+<button class="arriba" id="arriba" type="button" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ============================== PIE ==============================
+     Dirección, horario y redes. Edítalo aquí.
+     ================================================================= -->
+<footer class="pie">
+  <div class="contenedor pie__interior">
+    <img src="assets/img/logo-belum.svg" alt="BELUM — Coffee, Juices &amp; Workstation">
+    <p><a href="https://maps.google.com/?q=Fil%C3%B3sofos+215+Col.+Tecnol%C3%B3gico+Monterrey" target="_blank" rel="noopener">Filósofos 215, Col. Tecnológico · Monterrey, N.L.</a></p>
+    <p>Lunes a sábado 9:00 – 22:00 · Domingo 10:00 – 18:00</p>
+    <p><a href="https://instagram.com/belumcoffee" target="_blank" rel="noopener">@belumcoffee</a></p>
+    <p class="pie__nota">Precios en pesos mexicanos · Sujetos a cambio sin previo aviso</p>
+  </div>
+</footer>
+
+<script src="assets/js/menu-data.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
