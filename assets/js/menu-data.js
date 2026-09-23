@@ -339,15 +339,15 @@ const BELUM = {
           titulo: "Chilaquiles",
           layout: "completo",
           items: [
-            { nombre: "Chilaquiles Verdes", desc: "Crujientes totopos bañados en nuestra deliciosa salsa verde, con queso manchego gratinado.", precio: "$140", img: "assets/img/chilaquiles-verdes.webp" },
-            { nombre: "Chilaquiles Rojos",  desc: "Crujientes totopos bañados en nuestra deliciosa salsa roja, con queso manchego gratinado.", precio: "$140", img: "assets/img/chilaquiles-rojos.webp" }
+            { nombre: "Chilaquiles Verdes", desc: "Crujientes totopos bañados en nuestra deliciosa salsa verde, con queso manchego gratinado.", precio: "$140", img: null },
+            { nombre: "Chilaquiles Rojos",  desc: "Crujientes totopos bañados en nuestra deliciosa salsa roja, con queso manchego gratinado.", precio: "$140", img: null }
           ]
         },
         {
           titulo: "Enchiladas",
           layout: "completo",
           items: [
-            { nombre: "Enchiladas Suizas", desc: "Tortillas rellenas de pollo, bañadas en una cremosa salsa verde y cubiertas con queso manchego gratinado.", precio: "$170", img: "assets/img/enchiladas-suizas.webp", galeria: ["assets/img/enchiladas-suizas-2.webp"] }
+            { nombre: "Enchiladas Suizas", desc: "Tortillas rellenas de pollo, bañadas en una cremosa salsa verde y cubiertas con queso manchego gratinado.", precio: "$170", img:null, galeria: ["assets/img/enchiladas-suizas-2.webp"] }
           ]
         }
       ],
